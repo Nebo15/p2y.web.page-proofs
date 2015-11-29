@@ -1,10 +1,10 @@
-extends _simple-layout
+extends _layout
 
 mixin store-images
   a(href="#").app
-    img(src="img/app-store2.png" alt="img")
+    img(src="img/app-store.png" alt="img")
   a(href="#").app
-    img(src="img/google-play2.png" alt="img")
+    img(src="img/google-play.png" alt="img")
 
 block title
   title Title of template
@@ -33,9 +33,9 @@ block content
                       .card__info
                         button.card__icon ?
                         .card__block
-                          |CVV-код – это трехзначный код для проверки подлинности Вашей карты при оплате через интернет и других видах операций.
+                          | CVV-код – это трехзначный код для проверки подлинности Вашей карты при оплате через интернет и других видах операций.
                           br
-                          |Код CVV можно найти на обратной стороне карты – это последние 3 цифры из семизначного числа рядом с местом для подписи, которые, как правило, визуально отделены от всего числа.
+                          | Код CVV можно найти на обратной стороне карты – это последние 3 цифры из семизначного числа рядом с местом для подписи, которые, как правило, визуально отделены от всего числа.
                   .card__row
                     .card__label ваш номер телефона
                     input.input(type="text" placeholder="+38")
@@ -84,17 +84,18 @@ block content
               input.input(value="15000" placeholder="введите сумму")
               .currency грн.
             p комиссия 80 грн.
-            .price сумма к оплате
+            .price сумма к оплате&nbsp;
               strong 15080
-              |грн.
+              | &nbsp;грн.
             .step__but
-              button.btn(type="submit")
+              button.btn.btn_shad(type="submit")
                 span Перевести
           .step__text Нажимая кнопку "Перевести", вы соглашаетесь с офертой
 
 block content-footer
-  include ./includes/_content-description.jade
   hr.line
+  include ./includes/_content-description.jade
+  hr.line.is-mb
 
 block footer
   include ./includes/_footer.jade

@@ -1,10 +1,10 @@
-extends _layout
+extends _simple-layout
 
 mixin store-images
   a(href="#").app
-    img(src="img/app-store.png" alt="img")
+    img(src="img/app-store2.png" alt="img")
   a(href="#").app
-    img(src="img/google-play.png" alt="img")
+    img(src="img/google-play2.png" alt="img")
 
 block title
   title Title of template
@@ -19,6 +19,7 @@ block content
             .cards__col
               h4.title-middle Карта отправителя
               .card
+                .card__shad
                 .card__in
                   .card__row
                     input.input(type="text" placeholder="Номер карты")
@@ -41,6 +42,7 @@ block content
             .cards__col
               h4.title-middle Данные получателя
               .card.js-tab-group
+                .card__shad
                 .card__cont.js-tab-cont.js-tab1
                   .card__row
                     input.input(type="text" placeholder="Номер карты")
@@ -78,20 +80,21 @@ block content
           .step__wrap
             h4.title-middle Сумма перевода
             .input-field
+              .input-field__shad
               input.input(value="15000" placeholder="введите сумму")
               .currency грн.
             p комиссия 80 грн.
-            .price сумма к оплате&nbsp;
+            .price сумма к оплате
               strong 15080
               | &nbsp;грн.
-            button.btn.btn_shad(type="submit")
-              span Перевести
+            .step__but
+              button.btn.btn_shad(type="submit")
+                span Перевести
           .step__text Нажимая кнопку "Перевести", вы соглашаетесь с офертой
 
 block content-footer
-  hr.line
   include ./includes/_content-description.jade
-  hr.line.is-mb
+  hr.line
 
 block footer
   include ./includes/_footer.jade
