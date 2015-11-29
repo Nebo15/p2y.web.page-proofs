@@ -11,7 +11,7 @@ block content
 				form
 					.cards
 						.cards__col
-							h4.title-middle КАРТА ОТПРАВИТЕЛЯ
+							h4.title-middle Карта отправителя
 							.card
 								.card__in
 									.card__row
@@ -33,7 +33,7 @@ block content
 										.card__label ваш номер телефона
 										input.input(type="text" placeholder="+38")
 						.cards__col
-							h4.title-middle ДАННЫЕ ПОЛУЧАТЕЛЯ
+							h4.title-middle Данные получателя
 							.card.js-tab-group
 								.card__cont.js-tab-cont.js-tab1
 									.card__row
@@ -70,7 +70,7 @@ block content
 											.icon.icon-email
 											span по email
 					.step__wrap
-						h4.title-middle СУММА ПЕРЕВОДА
+						h4.title-middle Сумма перевода
 						.input-field
 							input.input(value="15000" placeholder="введите сумму")
 							.currency грн.
@@ -79,12 +79,12 @@ block content
 							strong 15080
 							|грн.
 						button.btn.btn_shad(type="submit")
-							span ПЕРЕВЕСТИ
+							span Перевести
 					.step__text Нажимая кнопку "Перевести", вы соглашаетесь с офертой
 	hr.line
 	section.rates
 		.rates__in
-			h3.title ТАРИФЫ И ЛИМИТЫ
+			h3.title Тарифы и лимиты
 			p Максимальная сумма платежа -
 				strong 15 000 грн,
 				|в сутки -
@@ -95,13 +95,11 @@ block content
 				a(href="#").btn.btn_bord узнать о других лимитах
 	section.answer
 		.answer__in
-			h3.title КАК ЭТО РАБОТАЕТ?
-			p При переводе средств по номеру карты получателя, деньги будут зачислены на карту в режиме онлайн без дополнительных действий получателя.
-			p При переводе средств с указанием номера мобильного телефона получателя, на указанный номер поступит СМС-сообщение с кодом перевода и ссылкой на сайт услуги. Перейдя по ссылке, получатель сможет выбрать карту, на которую будут зачислены средства, после чего они станут для него доступны. Код перевода действителен в течение 7 календарных дней.
-			p Также сервис позволяет получить деньги на Вашу карту, если получатель перевода - Вы.
+			h3.title Как это работает?
+			include:markdown contents/howitworks.md
 	section.annex
 		.annex__in
-			h3.title-small
+			h3.title-small Скачай приложение и переведи деньги с карты на карту в своем смартфоне
 			.annex__row
 				a(href="#").app
 					img(src="img/app-store.png" alt="img")
@@ -110,7 +108,7 @@ block content
 	hr.line
 	section.question
 		.question__in
-			h3.title ВОПРОСЫ И ОТВЕТЫ
+			h3.title Вопросы и ответы
 			.accord.js-accord.is-active
 				.accord__top.js-accord-but Перевод денег с карты на карту внутри банка
 				.accord__block.js-accord-block

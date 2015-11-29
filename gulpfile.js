@@ -183,7 +183,7 @@ gulp.task('font', function(){
 
 
 //webserver
-gulp.task('browser-sync', function() {
+gulp.task('browser-sync', ['build'], function() {
     browserSync({
         server: {
             baseDir: dest.root,
@@ -207,6 +207,7 @@ gulp.task('watch', function() {
     gulp.watch(['src/*.html', 'src/partials/*.html'], ['html']);
     gulp.watch(src.jade + '/**/*.jade', ['jade']);
     gulp.watch([src.jade + '/_*.jade', src.jade + '/includes/*.jade'], ['jade-all']);
+    gulp.watch([src.jade + '/contents/*.md'], ['jade-all']);
     gulp.watch(src.img + '/icons/*.png', ['sprite']);
 });
 
