@@ -1,11 +1,5 @@
 extends layouts/_simple
 
-mixin store-images
-  a(href="#").app
-    img(src="img/app-store2.png" alt="img")
-  a(href="#").app
-    img(src="img/google-play2.png" alt="img")
-
 block title
   title Title of template
 
@@ -22,7 +16,7 @@ block content
                 .card__shad
                 .card__in
                   .card__row
-                    input.input(type="text" placeholder="Номер карты")
+                    input.is-error.input(type="text" placeholder="Номер карты")
                   .card__row
                     .card__month
                       input.input(type="text" placeholder="Месяц")
