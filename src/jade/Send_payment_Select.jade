@@ -1,5 +1,11 @@
 extends _simple-layout
 
+mixin store-images
+	a(href="#").app
+		img(src="img/app-store2.png" alt="img")
+	a(href="#").app
+		img(src="img/google-play2.png" alt="img")
+
 block title
 	title Title of template
 
@@ -83,55 +89,9 @@ block content
 							|грн.
 						.step__but
 							button.btn(type="submit")
-								span перевести
+								span Перевести
 					.step__text Нажимая кнопку "Перевести", вы соглашаетесь с офертой
-	//- hr.line
-	section.rates
-		.rates__in
-			h3.title Тарифы и лимиты
-			p Максимальная сумма платежа -
-				strong 15 000 грн,
-				|в сутки -
-				strong 75 000 грн.
-			p Принимаются все карты Украинских банков с поддержкой 3-D Secure
-			p Срок зачисления - от нескольких секунд до 3х дней
-			.rates__but
-				a(href="#").btn.btn_bord
-					span узнать о других лимитах
-	section.answer
-		.answer__in
-			h3.title Как это работает?
-			include:markdown contents/howitworks.md
-	section.annex
-		.annex__in
-			h3.title-small Скачай приложение и переведи деньги с карты на карту в своем смартфоне
-			.annex__row
-				a(href="#").app
-					img(src="img/app-store2.png" alt="img")
-				a(href="#").app
-					img(src="img/google-play2.png" alt="img")
-	hr.line
-	section.question
-		.question__in
-			h3.title Вопросы и ответы
-			.question__wrap
-				.accord.js-accord.is-active
-					.accord__top.js-accord-but Перевод денег с карты на карту внутри банка
-					.accord__block.js-accord-block
-						p За перевод с карты на карту Тинькофф Банка комиссия не взимается.
-						p Деньги моментально поступают на счет получателя.
-				.accord.js-accord
-					.accord__top.js-accord-but Перевод денег с карты на карту другого банка
-					.accord__block.js-accord-block Lorem ipsum dolor sit amet, consectetur adipisicing.
-				.accord.js-accord
-					.accord__top.js-accord-but Куда можно переводить деньги?
-					.accord__block.js-accord-block Lorem ipsum dolor sit amet, consectetur adipisicing.
-				.accord.js-accord
-					.accord__top.js-accord-but Лимит перевода и от чего он зависит, возможные комиссии
-					.accord__block.js-accord-block Lorem ipsum dolor sit amet, consectetur adipisicing.
-				.accord.js-accord
-					.accord__top.js-accord-but Особенности перевода денег через интернет
-					.accord__block.js-accord-block Lorem ipsum dolor sit amet, consectetur adipisicing.
+	include ./includes/_content-description.jade
 	hr.line
 block footer
 	include ./includes/_footer-simple.jade
