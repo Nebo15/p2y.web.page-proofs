@@ -1,43 +1,5 @@
-section.rates
-    .rates__in
-        h3.title Тарифы и лимиты
-        p Максимальная сумма платежа -
-            strong 15 000 грн,
-            |в сутки -
-            strong 75 000 грн.
-        p Принимаются все карты Украинских банков с поддержкой 3-D Secure
-        p Срок зачисления - от нескольких секунд до 3х дней
-        .rates__but
-            a(href="#").btn.btn_bord
-                span узнать о других лимитах
-section.answer
-    .answer__in
-        h3.title Как это работает?
-        include:markdown ../contents/howitworks.md
-section.annex
-    .annex__in
-        h3.title-small Скачай приложение и переведи деньги с карты на карту в своем смартфоне
-        .annex__row
-            +store-images
+include ./_content-rates.jade
+include ./_content-howitworks.jade
+include ./_content-downloads.jade
 hr.line
-section.question
-    .question__in
-        h3.title Вопросы и ответы
-        .question__wrap
-            .accord.js-accord.is-active
-                .accord__top.js-accord-but Перевод денег с карты на карту внутри банка
-                .accord__block.js-accord-block
-                    p За перевод с карты на карту Тинькофф Банка комиссия не взимается.
-                    p Деньги моментально поступают на счет получателя.
-            .accord.js-accord
-                .accord__top.js-accord-but Перевод денег с карты на карту другого банка
-                .accord__block.js-accord-block Lorem ipsum dolor sit amet, consectetur adipisicing.
-            .accord.js-accord
-                .accord__top.js-accord-but Куда можно переводить деньги?
-                .accord__block.js-accord-block Lorem ipsum dolor sit amet, consectetur adipisicing.
-            .accord.js-accord
-                .accord__top.js-accord-but Лимит перевода и от чего он зависит, возможные комиссии
-                .accord__block.js-accord-block Lorem ipsum dolor sit amet, consectetur adipisicing.
-            .accord.js-accord
-                .accord__top.js-accord-but Особенности перевода денег через интернет
-                .accord__block.js-accord-block Lorem ipsum dolor sit amet, consectetur adipisicing.
+include ./_content-faq.jade
