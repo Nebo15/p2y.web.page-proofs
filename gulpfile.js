@@ -122,7 +122,7 @@ gulp.task('delete', function (cb) {
 // = gulp-changed
 // = gulp-plumber
 gulp.task('jade', function() {
-    return gulp.src([src.jade + '/*.jade', '!' + src.jade + '/_*.jade', '!' + src.jade + '/includes/*.jade'])
+    return gulp.src([src.jade + '/*.jade', '!' + src.jade + '/_*.jade', '!' + src.jade + '/includes/*.jade', '!' + src.jade + '/layouts/*.jade'])
         .pipe(plumber({errorHandler: notify.onError(function(error){return error.message;})}))
         .pipe(changed(dest.html, {extension: '.html'}))
         .pipe(jade({pretty: true}))
@@ -131,7 +131,7 @@ gulp.task('jade', function() {
 
 //compile all jade files
 gulp.task('jade-all', function() {
-    return gulp.src([src.jade + '/*.jade', '!' + src.jade + '/_*.jade', '!' + src.jade + '/includes/*.jade'])
+    return gulp.src([src.jade + '/*.jade', '!' + src.jade + '/_*.jade', '!' + src.jade + '/includes/*.jade', '!' + src.jade + '/layouts/*.jade'])
         .pipe(plumber({errorHandler: notify.onError(function(error){return error.message;})}))
         .pipe(jade({pretty: true}))
         .pipe(gulp.dest(dest.html));
