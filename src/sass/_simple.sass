@@ -365,29 +365,10 @@ body
 
 // input
 .input
-	padding: 0 20px
-	height: 47px
-	width: 100%
-	color: $c_input
-	font-size: 15px
 	line-height: 1.2
 	+h400
-	// -webkit-font-smoothing: antialiased
-	transform: translate3d(0,0,0)
-	transition: border-color .2s
-	border: 1px solid $bd-input
-	display: block
 	&:focus
 		border-color: $blue
-		&::placeholder
-			font-size: 0
-	&.is-error
-		border-color: $d_red
-		background: $l_red
-		& + .error-xext
-			display: block
-	&_yellow
-		border-color: $bd-yellow
 
 // checkbox
 .checkbox
@@ -446,12 +427,9 @@ body
 
 // line
 .line
-	margin: 0
 	padding: 0
-	height: 1px
 	background-color: $turquoise
 	background-image: linear-gradient(18deg, $turquoise 0%, $green 100%)
-	border: none
 
 // rates
 .rates
